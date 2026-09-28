@@ -11,12 +11,12 @@ jobs:
         with:
           python-version: '3.13'
       - run: python -m pip install -r requirements.txt
-      - run: python -B replay.py --full --out ../normal-replay
-      - run: python -OO -B replay.py --full --out ../optimized-replay
+      - run: python -B replay.py --full --out "${{ runner.temp }}/normal-replay"
+      - run: python -OO -B replay.py --full --out "${{ runner.temp }}/optimized-replay"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: replay-evidence
           path: |
-            ../normal-replay
-            ../optimized-replay
+            ${{ runner.temp }}/normal-replay
+            ${{ runner.temp }}/optimized-replay
