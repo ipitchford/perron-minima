@@ -1,0 +1,28 @@
+{
+  "Phi_at_one": "95089/540000",
+  "approximate_interval_for_reading": [
+    0.910844108421038,
+    0.910844108421038
+  ],
+  "n": 3,
+  "optimal_orders": "every fixed transitive order",
+  "optimal_worst_case_perron_interval": [
+    "1409462989201996182286777869/1547425049106725343623905280",
+    "704731494600998091143388937/773712524553362671811952640"
+  ],
+  "robust_strict_stability": true,
+  "scope": "a single fixed but unknown matrix from the parameter box; not arbitrary switching",
+  "worst_corner": {
+    "gamma": [
+      "1/20",
+      "1/25",
+      "1/30"
+    ],
+    "m": [
+      "1/3",
+      "2/3",
+      "1"
+    ],
+    "t": "3/4"
+  }
+}

@@ -1,0 +1,129 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  11pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=25mm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{microtype}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Evidence Press — Perron optimisation}
+\fancyhead[R]{\small v1.0}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Review guide --- final editorial candidate
+v1.0}\label{review-guide-final-editorial-candidate-v1.0}
+
+Read \texttt{paper/perron\_minima.pdf} first. The stronger weighted
+theorem leads the article. The key additional obligations not covered by
+the supplied referee review are:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Theorem 4.1: the four-cycle difference (4.2), the all-diagonals
+  coefficient extraction, and positive reconstruction from tetrads. The
+  theorem's universal diagonal quantifier is intentional.
+\item
+  Proposition 4.2: strict coordinate signs imply a strict local minimum
+  at a box vertex; finite continuity preserves them under small
+  pair-weight perturbations. The nonzero constant polynomial difference
+  forbids a common Perron root.
+\item
+  Proposition 3.1: derivatives of the scalar equation and the strict
+  coupling sign. The robust minimax result then follows from a pointwise
+  common optimiser, not a minimax exchange theorem.
+\item
+  Section 6.1: distinguish the uniform coefficient, the exact remainder
+  and the input-dependent coefficient. Neither the coefficient nor the
+  returned copy is claimed optimal.
+\end{enumerate}
+
+The full proof of the reviewed weighted landscape theorem is in Section
+2. Sections 5--6 include the inherited parity mechanism with explicit
+attribution. Check the even-order tournament restriction before using
+(5.7).
+
+Run
+\texttt{python\ replay.py\ -\/-full\ -\/-out\ /path/outside/the/bundle}.
+It includes the original eight-job replay and the independently supplied
+referee program. New negative controls are split across four jobs.
+\texttt{python\ replay.py\ -\/-smoke} checks the current reference
+identities and domain guards. The exact new program imports the retained
+rational core; the separate SymPy implementation does not import it. The
+referee program imports no submitted routines.
+
+\texttt{reference\_extensions.json} is a set of frozen expectations, not
+an axiom: the checks reconstruct determinants, roots and signs
+independently. Altering its cycle coefficient, a polynomial constant or
+its robust polynomial value must be rejected even if its manifest is
+updated. Acceptance uses explicit exceptions, never Python assertions.
+
+Suggested close-prior-art follow-up: the complete Kirkland 1995
+arc-reversal paper and the remaining fixed-pair-sum literature. The
+primary full-text comparisons undertaken here are listed in
+\texttt{SOURCE\_LEDGER.md}. A bounded nonmatch is not proof of priority.
+
+\end{document}

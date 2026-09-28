@@ -1,0 +1,36 @@
+{
+  "compilation_checks": {
+    "missing_glyphs": 0,
+    "overfull_boxes": 0,
+    "unresolved_references": 0
+  },
+  "date": "2026-09-28",
+  "documents": [
+    {
+      "pages": 15,
+      "pdf": "paper/perron_minima.pdf"
+    },
+    {
+      "pages": 3,
+      "pdf": "review/RESPONSE_TO_REVIEW.pdf"
+    },
+    {
+      "pages": 1,
+      "pdf": "review/REVIEW_GUIDE.pdf"
+    }
+  ],
+  "engine": "pandoc to LaTeX; pdfTeX, two passes",
+  "layout_review": "Publication revision: native and local compilation passed; new visual inspection recorded separately in PDF_QA.json.",
+  "pdf_byte_reproducibility": "PDFs are frozen artifacts; a fresh LaTeX build can change metadata. Mathematical replay does not regenerate PDFs.",
+  "sha256": {
+    "paper/perron_minima.md": "e3ea3ac4bad88c29b1041687c3c3ab4d6cdd767c835e745e0f290e909fef5a14",
+    "paper/perron_minima.pdf": "6e8e62dd2ea7a4a9658b903f3c23ef7cc7ac22148e8b370197dad2941127c09e",
+    "paper/perron_minima.tex": "be457bf9b77bf08d6ed6305d1bbd8fe94c3cd470e9b387523964de42f84b3530",
+    "review/RESPONSE_TO_REVIEW.md": "86a0c890bea5a99c3c884e3568195baf39d25dffdd170fda1ea840df7e7bfbff",
+    "review/RESPONSE_TO_REVIEW.pdf": "35eb545079ba5860b871d0d974b4137093399a14ebc430399cead588a32c8d69",
+    "review/RESPONSE_TO_REVIEW.tex": "63ecf4a41f09b17b0fe6a262e369dfedc5c246262819478348a73781d79fb3a6",
+    "review/REVIEW_GUIDE.md": "026b6154974e54c7f50f77ac8ed8b203b714401df04b5a028d27cbcea634723b",
+    "review/REVIEW_GUIDE.pdf": "e33f0a1a6e0ffd6660b13e4f55da427708a0a6e5420232f9ee500765affe9b30",
+    "review/REVIEW_GUIDE.tex": "5935e1a9a8cfa89491c1ca4dafcd13f36a06a2c4eb07631efa89a5ddb3ffc5ea"
+  }
+}

@@ -1,0 +1,8 @@
+Running verify_reference.py
+Running verify_exact.py
+Running verify_symbolic.py
+Running negative_controls.py --part none
+Running negative_controls.py --part wrong_determinant
+Running negative_controls.py --part wrong_resolvent_gap
+Running negative_controls.py --part negative_coefficient
+Running numerical_checks.py

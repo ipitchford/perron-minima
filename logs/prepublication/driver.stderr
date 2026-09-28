@@ -1,0 +1,10 @@
+Running verify_public_reference.py
+Running verify_extensions.py
+Running verify_new_symbolic.py
+Running verify_manuscript.py
+Running negative_controls.py --part none
+Running negative_controls.py --part cycle
+Running negative_controls.py --part polynomial
+Running negative_controls.py --part robust
+Running replay_sources.py reviewed
+Running replay_sources.py referee

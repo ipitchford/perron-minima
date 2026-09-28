@@ -1,0 +1,89 @@
+{
+  "jobs": [
+    {
+      "job": [
+        "verify_public_reference.py"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "9d7609feb6f3928722e6eb9db311b085d8c6245085cd353949c6937459103104"
+    },
+    {
+      "job": [
+        "verify_extensions.py"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "9cc34ed63db62b6bcfa2799a11a1c474b04c8495820d1e40d5e64fa67ffee2a9"
+    },
+    {
+      "job": [
+        "verify_new_symbolic.py"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "e8b9e2287e590ee320aad67c7a73a0cafa76b9219bf9e12c4caed8bf4dea1216"
+    },
+    {
+      "job": [
+        "verify_manuscript.py"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "69eaa68966c40d33f9b413a79bb2d3978ce6ea8baa4d9b8179a3aa98d70591ae"
+    },
+    {
+      "job": [
+        "negative_controls.py",
+        "--part",
+        "none"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "74c394301d9fcebe6d3afd65b311e840c7fc86d5d1efddfb8f5765fd356171b6"
+    },
+    {
+      "job": [
+        "negative_controls.py",
+        "--part",
+        "cycle"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "424858a5aef7f8242e3f60523f2227ac2813011679c3c6925ed76c769618554b"
+    },
+    {
+      "job": [
+        "negative_controls.py",
+        "--part",
+        "polynomial"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "424858a5aef7f8242e3f60523f2227ac2813011679c3c6925ed76c769618554b"
+    },
+    {
+      "job": [
+        "negative_controls.py",
+        "--part",
+        "robust"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "424858a5aef7f8242e3f60523f2227ac2813011679c3c6925ed76c769618554b"
+    },
+    {
+      "job": [
+        "replay_sources.py",
+        "reviewed"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "5a5dea669b6703322751cfa96a72e8eb7817ac46818a7e551058aa8ed8428af9"
+    },
+    {
+      "job": [
+        "replay_sources.py",
+        "referee"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "2f5537eac1b1071d0da3f97829449eb4fece568b2c58ab606be7d711a68abf2a"
+    }
+  ],
+  "manifested_files_after": 78,
+  "manifested_files_before": 78,
+  "mode": "full",
+  "scope": "deterministic identity/finite checks and scoped numerical reruns; not proof-assistant verification",
+  "status": "PASS"
+}

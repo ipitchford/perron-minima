@@ -1,0 +1,8 @@
+{
+  "deterministic_results_identical": true,
+  "jobs": 8,
+  "manifested_files": 40,
+  "source_scope": "reviewed package only; nested archives retained, not recursively replayed by this job",
+  "source_sha256": "075d2618f7e86d7be211717222c351ba77d7df91ccbe77fef85d99bde923ff6f",
+  "status": "PASS"
+}

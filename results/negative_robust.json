@@ -1,0 +1,68 @@
+{
+  "cases": [
+    {
+      "accepted": false,
+      "case": "robust",
+      "mode": "ordinary",
+      "wrapper": false
+    },
+    {
+      "accepted": false,
+      "case": "robust",
+      "mode": "ordinary",
+      "wrapper": true
+    },
+    {
+      "accepted": false,
+      "case": "robust",
+      "mode": "-O",
+      "wrapper": false
+    },
+    {
+      "accepted": false,
+      "case": "robust",
+      "mode": "-O",
+      "wrapper": true
+    },
+    {
+      "accepted": false,
+      "case": "robust",
+      "mode": "-OO",
+      "wrapper": false
+    },
+    {
+      "accepted": false,
+      "case": "robust",
+      "mode": "-OO",
+      "wrapper": true
+    },
+    {
+      "accepted": false,
+      "case": "robust",
+      "mode": "env1",
+      "wrapper": false
+    },
+    {
+      "accepted": false,
+      "case": "robust",
+      "mode": "env1",
+      "wrapper": true
+    },
+    {
+      "accepted": false,
+      "case": "robust",
+      "mode": "env2",
+      "wrapper": false
+    },
+    {
+      "accepted": false,
+      "case": "robust",
+      "mode": "env2",
+      "wrapper": true
+    }
+  ],
+  "invalid_rejections": 10,
+  "scope": "Three explicit mathematical corruptions, not exhaustive software validation",
+  "status": "PASS",
+  "valid_acceptances": 0
+}

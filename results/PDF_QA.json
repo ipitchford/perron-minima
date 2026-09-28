@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "date": "2026-09-28",
+  "pages": 15,
+  "pdfSha256": "6e8e62dd2ea7a4a9658b903f3c23ef7cc7ac22148e8b370197dad2941127c09e",
+  "compilation": "Local pdfLaTeX and built-in compiler succeeded",
+  "text": "Zero raw-TeX findings",
+  "visual": "All 15 pages inspected. No clipping, overlap or missing glyphs seen; numbered results, proofs, references, tables, Anonymous byline and DOI present.",
+  "limitations": "Publication-agent inspection, not external review."
+}

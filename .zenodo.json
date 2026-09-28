@@ -1,0 +1,38 @@
+{
+  "title": "Exact Perron optimisation with factorised pair interactions",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p>Unrefereed candidate. Written universal arguments are not formally verified. Producer-side replay and a separately written supplied checker do not establish unaffiliated reproduction or authenticated external specialist review. Bounded prior-art checking does not establish priority.</p><p>Every local Perron minimum in the specified factorised pair-interaction box is a saturated transitive orientation. The candidate supplies the common characteristic polynomial, robust-design consequences, a tetrad characterisation of universal-diagonal cospectrality, a strict nonglobal-minimum obstruction outside factorisation, and constructive tournament stability. Exact and symbolic checks accompany analytic proofs. The uniform recovery coefficient is conservative. Sections 3–4 additions are not covered by the supplied review. Historical numerical output is not byte-reproducible across environments; current replay separates exact checks from explicitly tolerance-tested corroboration.</p><p>Original prose/data: CC0-1.0; original code: MIT; retained historical and supplied third-party materials keep their own terms.</p>",
+  "creators": [
+    {
+      "name": "Anonymous"
+    }
+  ],
+  "version": "1.0.1-candidate",
+  "publication_date": "2026-09-28",
+  "access_right": "open",
+  "license": "cc-zero",
+  "keywords": [
+    "Perron eigenvalue",
+    "spectral optimisation",
+    "robust design",
+    "tournament matrices",
+    "tetrads",
+    "unrefereed candidate"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ipitchford/perron-minima",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "references": [
+    "Psarrakos and Tsatsomeros (2003). https://doi.org/10.1016/S0024-3795(02)00439-1",
+    "Psarrakos and Tsatsomeros (2006). https://doi.org/10.1016/j.laa.2005.12.018",
+    "Kirkland (1995). https://doi.org/10.1016/0024-3795(94)00160-F",
+    "Drton, Sturmfels and Sullivant (2007). https://doi.org/10.1007/s00440-006-0033-2",
+    "Engel and Sergeev (2023). https://doi.org/10.1016/j.laa.2023.05.014",
+    "Drury (2012). https://doi.org/10.1016/j.laa.2011.11.031"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "version": "1.0.1-candidate",
+  "doi": "10.5281/zenodo.23014818",
+  "status": "unrefereed-candidate",
+  "claims": [
+    {
+      "alias": "MIN",
+      "id": "sha256:0b3b0300cb7cf8b4110cb7f116d3deb1060798ac162cfc4e5b12defa67f4c336",
+      "statement": "For n>=2, positive m, nonnegative gamma and 0<t<1, every local Perron minimum on the skew box is saturated transitive; all n! transitive orders are globally optimal and share polynomial (2.1).",
+      "locator": "Theorem 2.1",
+      "evidence": "paper/perron_minima.pdf; CLAIM_CHECK_MAP.md",
+      "formalVerification": "not-established",
+      "independentReproduction": "not-established"
+    },
+    {
+      "alias": "ROBUST",
+      "id": "sha256:2b322291f9afb5280e01776ff578bfa1d883fa21491ec021dad7ebecf2fc208a",
+      "statement": "Every fixed transitive order simultaneously minimises all admissible parameter instances. Over a rectangular uncertainty box the worst optimum is at (m+, gamma+, t-), and a robustly Schur-stable orientation exists exactly under (3.4).",
+      "locator": "Theorems 3.2–3.3",
+      "evidence": "paper/perron_minima.pdf; CLAIM_CHECK_MAP.md",
+      "formalVerification": "not-established",
+      "independentReproduction": "not-established"
+    },
+    {
+      "alias": "APPROX",
+      "id": "sha256:de777bd0688fe0ed8e33cab60a20d1b4b43bd7afbc0cf2d954d31953018394c0",
+      "statement": "If positive pair weights are within multiplicative kappa of a factorisation, every transitive orientation is within kappa squared of the optimum, for fixed nonnegative diagonal and 0<t<1.",
+      "locator": "Proposition 3.4",
+      "evidence": "paper/perron_minima.pdf; CLAIM_CHECK_MAP.md",
+      "formalVerification": "not-established",
+      "independentReproduction": "not-established"
+    },
+    {
+      "alias": "TETRAD",
+      "id": "sha256:1bd1cd6516ebff28074165fa446900321dc8410b8056b10fc6af54fbe8899eeb",
+      "statement": "For n>=4 and fixed 0<t<1, positive pair factorisation is equivalent to transitive-order cospectrality for every nonnegative diagonal, and to the four-point determinant/tetrad conditions.",
+      "locator": "Theorem 4.1",
+      "evidence": "paper/perron_minima.pdf; CLAIM_CHECK_MAP.md",
+      "formalVerification": "not-established",
+      "independentReproduction": "not-established"
+    },
+    {
+      "alias": "FRAGILE",
+      "id": "sha256:3d571c9cff035346832d5ff40860a89da42b7d5fd32cfa72eb7bafad009f92f5",
+      "statement": "For fixed 0<t<1, increasing one unit pair weight in order four by every sufficiently small epsilon>0 produces a strict nonglobal local minimum.",
+      "locator": "Proposition 4.2",
+      "evidence": "paper/perron_minima.pdf; CLAIM_CHECK_MAP.md",
+      "formalVerification": "not-established",
+      "independentReproduction": "not-established"
+    },
+    {
+      "alias": "RECOVERY",
+      "id": "sha256:81fd53b12393b44aa2e8d1c94453b8539111d05ecc0000b495bf724701272dec",
+      "statement": "For even-order tournaments n>=4 and 0<t<=1, the specified construction returns a Brualdi–Li copy with spectral deficit at least c_n(u) times its unordered-edge distance; recovery need not be nearest.",
+      "locator": "Theorem 6.2",
+      "evidence": "paper/perron_minima.pdf; CLAIM_CHECK_MAP.md",
+      "formalVerification": "not-established",
+      "independentReproduction": "not-established"
+    }
+  ]
+}

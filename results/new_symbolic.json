@@ -1,0 +1,9 @@
+{
+  "scalar_derivative_identities": 5,
+  "scope": "symbolic identities and exact interval certificates, not proof-assistant verification",
+  "status": "PASS",
+  "strict_coordinate_derivatives": 144,
+  "strict_local_vertices": 24,
+  "symbolic_four_point_orders": 24,
+  "universal_four_point_identity": true
+}

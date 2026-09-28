@@ -1,0 +1,5 @@
+{
+  "guaranteed_approximation_factor": "10201/10000",
+  "kappa": "101/100",
+  "scope": "any transitive orientation, fixed nonnegative diagonal and 0<t<1; factor not claimed sharp"
+}

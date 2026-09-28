@@ -1,0 +1,21 @@
+{
+  "backedges": 4,
+  "certified_deficit_lower": "1218003072/999154878065",
+  "edit_coefficient": "102487/4275743760",
+  "edits_to_returned_BL": 4,
+  "lambda_BL": "19667808/3299185",
+  "mode": "nearly_regular",
+  "n": 6,
+  "returned_order": [
+    4,
+    2,
+    5,
+    1,
+    3,
+    0
+  ],
+  "score_exclusion_gap": "263/8424",
+  "stable_swaps": 2,
+  "t": "1638984/3299185",
+  "u": "1/12"
+}

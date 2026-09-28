@@ -1,0 +1,13 @@
+{
+ "version":1,
+ "four_cycle_coefficient":-4,
+ "fragility_epsilon":"1/100",
+ "fragility_t":"1/2",
+ "fragility_high_polynomial":["1","0","-180603/40000","-603/100","-392991/160000"],
+ "fragility_low_polynomial":["1","0","-180603/40000","-603/100","-391791/160000"],
+ "robust_Phi_at_one":"95089/540000",
+ "recovery_bits":9564,
+ "recovery_u":"1/12",
+ "recovery_returned_distance":4,
+ "recovery_nearest_distance":1
+}

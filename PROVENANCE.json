@@ -1,0 +1,25 @@
+{
+  "inputs": [
+    {
+      "bytes": 1950767,
+      "modified": false,
+      "path": "provenance/resolvent_extensions_v0_1.zip",
+      "sha256": "075d2618f7e86d7be211717222c351ba77d7df91ccbe77fef85d99bde923ff6f"
+    },
+    {
+      "bytes": 8074,
+      "modified": false,
+      "path": "provenance/referee_checks_2026-09-28.zip",
+      "sha256": "c52fa53c55737f24ac26cbdf1149d778048657dc0345048ae3c68357fb77952c"
+    },
+    {
+      "bytes": 30548,
+      "modified": false,
+      "path": "review/SUPPLIED_REVIEW.txt",
+      "sha256": "4461260e970868c334a720c455f424c1b5cf1098e744eb7cfd101180e4a4280c"
+    }
+  ],
+  "predecessor_archive_nested_sha256": "25a90b62e165d2a8e779f1760859283da67387bc06a7fdc334cb88c9a6071ac4",
+  "scope": "unchanged input archives retained, copied executable core identified separately by verifier",
+  "third_party_journal_pdfs": "not included"
+}

@@ -1,0 +1,251 @@
+{
+  "all_transitive_orders": [
+    {
+      "class": "high",
+      "order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "class": "low",
+      "order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "class": "low",
+      "order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "class": "low",
+      "order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "class": "low",
+      "order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "class": "low",
+      "order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "class": "low",
+      "order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "class": "low",
+      "order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "class": "low",
+      "order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "class": "high",
+      "order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    }
+  ],
+  "polynomials": {
+    "high": {
+      "coefficients": [
+        "1",
+        "0",
+        "-180603/40000",
+        "-603/100",
+        "-392991/160000"
+      ],
+      "count": 16,
+      "root_interval": [
+        "1612897339140211517579829/604462909807314587353088",
+        "3225794678280423035159659/1208925819614629174706176"
+      ]
+    },
+    "low": {
+      "coefficients": [
+        "1",
+        "0",
+        "-180603/40000",
+        "-603/100",
+        "-391791/160000"
+      ],
+      "count": 8,
+      "root_interval": [
+        "3225596973614641422714063/1208925819614629174706176",
+        "201599810850915088919629/75557863725914323419136"
+      ]
+    }
+  },
+  "scope": "root separation exact; local-minimum gradient signs are independently checked by verify_new_symbolic.py"
+}

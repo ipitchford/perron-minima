@@ -1,0 +1,24 @@
+{
+  "candidate_squared_weights": [
+    "101/100",
+    "101/100",
+    "100/101",
+    "100/101"
+  ],
+  "factorised": false,
+  "failed_tetrads": [
+    {
+      "indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "products": [
+        "101/100",
+        "1",
+        "1"
+      ]
+    }
+  ]
+}

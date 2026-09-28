@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "Anonymous"
+  ],
+  "authorship_status": "Anonymous scholarly attribution; account ownership is not a research contribution",
+  "canonical_release_url": "https://evidencepress.org/releases/perron-minima/",
+  "date": "2026-09-28",
+  "deployment_status": "candidate-prepared; public state requires provider readback",
+  "doi": "10.5281/zenodo.23014818",
+  "editorial_identifier": "EP-PERRON-MINIMA-2026-09-28-v1.0",
+  "formal_verification": false,
+  "prepared_for": "Evidence Press",
+  "public_licence": "CC0-1.0",
+  "publisher_home": "https://evidencepress.org",
+  "release_steward": "Evidence Press",
+  "review_scope": "supplied favourable review of v0.1 main mathematics; Sections 3-4 additions have no separate specialist review",
+  "subtitle": "Robust design, structural limits and constructive tournament stability",
+  "title": "Exact Perron optimisation with factorised pair interactions",
+  "version": "1.0.1-candidate",
+  "concept_doi": "10.5281/zenodo.23014817",
+  "repository": "https://github.com/ipitchford/perron-minima",
+  "code_licence": "MIT"
+}

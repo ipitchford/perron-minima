@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite this candidate version and retain its assurance boundary."
+title: "Exact Perron optimisation with factorised pair interactions"
+authors:
+  - name: Anonymous
+version: "1.0.1-candidate"
+date-released: 2026-09-28
+doi: "10.5281/zenodo.23014818"
+url: "https://github.com/ipitchford/perron-minima"
+license: CC0-1.0

@@ -1,0 +1,4 @@
+{"invalid_rejections": 0, "status": "PASS", "valid_acceptances": 10}
+{"invalid_rejections": 10, "status": "PASS", "valid_acceptances": 0}
+{"invalid_rejections": 10, "status": "PASS", "valid_acceptances": 0}
+{"invalid_rejections": 10, "status": "PASS", "valid_acceptances": 0}

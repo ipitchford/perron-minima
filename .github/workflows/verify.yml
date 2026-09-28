@@ -1,0 +1,22 @@
+name: Candidate replay
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - run: python -B replay.py --full --out ../normal-replay
+      - run: python -OO -B replay.py --full --out ../optimized-replay
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: replay-evidence
+          path: |
+            ../normal-replay
+            ../optimized-replay

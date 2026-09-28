@@ -1,0 +1,175 @@
+{
+  "schemaVersion": "1.0",
+  "contributionMap": [
+    {
+      "claim": "For n>=2, positive m, nonnegative gamma and 0<t<1, every local Perron minimum on the skew box is saturated transitive; all n! transitive orders are globally optimal and share polynomial (2.1).",
+      "unit": "statement",
+      "paperLocation": "Theorem 2.1",
+      "searches": [
+        {
+          "date": "2026-09-28",
+          "query": "Perron pair sums minimum transitive; arc reversal; factor analysis tetrads",
+          "corpus": "Supplied dated source audit and primary web/arXiv search"
+        }
+      ],
+      "closestPriorWork": "PT03/PT06 rank-one setting; K95 arc reversals; ES23 independent row permutations",
+      "verdict": "partially-known-cited"
+    },
+    {
+      "claim": "Every fixed transitive order simultaneously minimises all admissible parameter instances. Over a rectangular uncertainty box the worst optimum is at (m+, gamma+, t-), and a robustly Schur-stable orientation exists exactly under (3.4).",
+      "unit": "statement",
+      "paperLocation": "Theorems 3.2–3.3",
+      "searches": [
+        {
+          "date": "2026-09-28",
+          "query": "Perron pair sums minimum transitive; arc reversal; factor analysis tetrads",
+          "corpus": "Supplied dated source audit and primary web/arXiv search"
+        }
+      ],
+      "closestPriorWork": "Classical Perron monotonicity/common-optimiser comparison",
+      "verdict": "partially-known-cited"
+    },
+    {
+      "claim": "If positive pair weights are within multiplicative kappa of a factorisation, every transitive orientation is within kappa squared of the optimum, for fixed nonnegative diagonal and 0<t<1.",
+      "unit": "statement",
+      "paperLocation": "Proposition 3.4",
+      "searches": [
+        {
+          "date": "2026-09-28",
+          "query": "Perron pair sums minimum transitive; arc reversal; factor analysis tetrads",
+          "corpus": "Supplied dated source audit and primary web/arXiv search"
+        }
+      ],
+      "closestPriorWork": "Classical Perron monotonicity/common-optimiser comparison",
+      "verdict": "partially-known-cited"
+    },
+    {
+      "claim": "For n>=4 and fixed 0<t<1, positive pair factorisation is equivalent to transitive-order cospectrality for every nonnegative diagonal, and to the four-point determinant/tetrad conditions.",
+      "unit": "statement",
+      "paperLocation": "Theorem 4.1",
+      "searches": [
+        {
+          "date": "2026-09-28",
+          "query": "Perron pair sums minimum transitive; arc reversal; factor analysis tetrads",
+          "corpus": "Supplied dated source audit and primary web/arXiv search"
+        }
+      ],
+      "closestPriorWork": "DSS07 Theorem 16: classical tetrads; spectral equivalence separately proved",
+      "verdict": "partially-known-cited"
+    },
+    {
+      "claim": "For fixed 0<t<1, increasing one unit pair weight in order four by every sufficiently small epsilon>0 produces a strict nonglobal local minimum.",
+      "unit": "statement",
+      "paperLocation": "Proposition 4.2",
+      "searches": [
+        {
+          "date": "2026-09-28",
+          "query": "Perron pair sums minimum transitive; arc reversal; factor analysis tetrads",
+          "corpus": "Supplied dated source audit and primary web/arXiv search"
+        }
+      ],
+      "closestPriorWork": "PT03/PT06 rank-one setting; K95 arc reversals; ES23 independent row permutations",
+      "verdict": "partially-known-cited"
+    },
+    {
+      "claim": "For even-order tournaments n>=4 and 0<t<=1, the specified construction returns a Brualdi–Li copy with spectral deficit at least c_n(u) times its unordered-edge distance; recovery need not be nearest.",
+      "unit": "statement",
+      "paperLocation": "Theorem 6.2",
+      "searches": [
+        {
+          "date": "2026-09-28",
+          "query": "Perron pair sums minimum transitive; arc reversal; factor analysis tetrads",
+          "corpus": "Supplied dated source audit and primary web/arXiv search"
+        }
+      ],
+      "closestPriorWork": "EP26 inherited parity mechanism; Drury endpoint",
+      "verdict": "partially-known-cited"
+    },
+    {
+      "claim": "Perron derivative/resolvent comparison, positive-vector bounds and classical tetrad algebra",
+      "unit": "method",
+      "paperLocation": "Sections 2,4–6",
+      "searches": [
+        {
+          "date": "2026-09-28",
+          "query": "Spectral radii of tournament matrices whose graphs are related by an arc reversal; Algebraic factor analysis tetrads",
+          "corpus": "Primary papers and supplied full-text audit"
+        }
+      ],
+      "closestPriorWork": "K95; PT03/PT06; DSS07; EP26",
+      "verdict": "known-cited"
+    }
+  ],
+  "sourcesReadInFull": [
+    {
+      "citation": "Engel–Sergeev arXiv:2209.01991",
+      "usedFor": "Distinct independent row-permutation domain",
+      "readWhat": "Definition 1.1; Theorems 3.3–3.4 and argument",
+      "date": "2026-09-28",
+      "evidenceLocator": "https://arxiv.org/pdf/2209.01991 pp.2,8–9"
+    },
+    {
+      "citation": "Drton–Sturmfels–Sullivant arXiv:math/0509390",
+      "usedFor": "Classical tetrad attribution",
+      "readWhat": "Theorem 16 and definition of tetrads",
+      "date": "2026-09-28",
+      "evidenceLocator": "https://arxiv.org/pdf/math/0509390 p.16"
+    }
+  ],
+  "limitationTriage": [
+    {
+      "limitation": "Numerical byte reproducibility",
+      "closingQuestion": "Can seeded inputs and semantic numerical checks be separated from byte identity?",
+      "triedOrSearched": "Pinned diagnostic isolated 2e-14 objective drift; explicit comparator and controls added.",
+      "estimatedCost": "bounded publication repair",
+      "cheap": true,
+      "decision": "CLOSED",
+      "reasonOpen": "",
+      "whyNotClosedNow": ""
+    },
+    {
+      "limitation": "General pair-weight landscape, sharp constants, nearest recovery, general interval t interface",
+      "closingQuestion": "Would an existing theorem or small check establish these extensions?",
+      "triedOrSearched": "Supplied review and Section 7: obstruction and non-nearest witness rule out naive generalisation; no complete route identified.",
+      "estimatedCost": "separate research or unaffiliated assurance; not reliably costed",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Not established by this candidate; preserve explicit scope.",
+      "whyNotClosedNow": ""
+    },
+    {
+      "limitation": "Arbitrary-switching or applied validation",
+      "closingQuestion": "Do fixed-matrix inequalities control products or empirical models?",
+      "triedOrSearched": "Theorem quantifiers inspected: they do not; no such claim published.",
+      "estimatedCost": "separate research or unaffiliated assurance; not reliably costed",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Not established by this candidate; preserve explicit scope.",
+      "whyNotClosedNow": ""
+    },
+    {
+      "limitation": "Independent/formal review and exhaustive priority",
+      "closingQuestion": "Can current evidence establish these dimensions?",
+      "triedOrSearched": "Source access limits and supplied-review provenance inspected; neither replay nor a bounded search establishes them.",
+      "estimatedCost": "separate research or unaffiliated assurance; not reliably costed",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Not established by this candidate; preserve explicit scope.",
+      "whyNotClosedNow": ""
+    }
+  ],
+  "extensionScout": {
+    "by": "Codex publication intake",
+    "date": "2026-09-28",
+    "proposals": [
+      "Clarify existential stability quantifier",
+      "Repair nonportable numerical identity without altering exact gates",
+      "Broader landscape and sharper recovery remain research"
+    ],
+    "actions": [
+      "Clarified Theorem 3.3 in both sources",
+      "Added explicit numerical contract, raw differences and rejection controls",
+      "Preserved limitations; no new substantive research claim"
+    ]
+  }
+}

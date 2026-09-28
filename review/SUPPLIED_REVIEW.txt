@@ -1,0 +1,412 @@
+# Academic review
+
+**Manuscript:** *Constructive resolvent ordering and weighted Perron minima: Quantitative Brualdi–Li recovery and a heterogeneous extremal principle*
+**Version reviewed:** Research draft 0.1, 27 September 2026
+**Recommendation:** **Major revision, with a favourable mathematical assessment**
+**Prospective REF rating:** **3★ — internationally excellent; moderate confidence**
+
+## 1. Executive assessment
+
+This manuscript contains two substantive mathematical contributions: an explicit resolvent-ordering certificate leading to constructive Brualdi–Li stability, and a classification of all local and global Perron minima in a heterogeneous matrix family. **The weighted minimum theorem is the stronger contribution:** arbitrary positive vertex weights and arbitrary nonnegative diagonal entries are allowed, every local minimum is transitive, and all transitive orientations have the same characteristic polynomial.
+
+I found **no fatal defect in the main proofs**. The supplied full computational replay passed, and independent implementations corroborated the principal claims. There is a genuine but easily repaired endpoint error in Section 3, together with a domain ambiguity in its spectral comparison.
+
+The principal publication weaknesses are not missing computational evidence. They are incomplete comparison with the closest spectral-optimisation literature, insufficient separation of new contributions from the predecessor, and limited interpretation of the stability coefficient. My calculations show that the coefficient is substantially conservative in the first nontrivial cases.
+
+The paper is more than a collection of numerical observations or a routine restatement of the older Levinger bounds. It looks capable of supporting a good specialist publication. **My central REF assessment is 3★, not 4★:** the mathematical substance is credible, but exceptional originality and agenda-setting significance have not yet been established.
+
+## 2. Scope and evidence limits
+
+I examined the eight-page manuscript and its mathematical source, the research note, claim–check map, source and evidence ledgers, verification code, recorded results, and relevant predecessor arguments.
+
+The reviewed manuscript is available here: [manuscript PDF](sandbox:/mnt/data/review_resolvent/resolvent_extensions_v0_1/paper/resolvent_extensions.pdf).
+
+I ran the current package’s complete replay and wrote a separate checking program that **does not import the submitted code**. The independent program, results, replay logs and input identification are preserved in the [referee-check package](sandbox:/mnt/data/resolvent_referee_checks_2026-09-28.zip).
+
+The assessment has three important boundaries. First, the universal theorems are assessed through their proofs, not inferred from finite enumeration. Second, I inspected relevant nested predecessor material but did not independently replay those predecessor packages. Third, the literature search was targeted rather than an exhaustive MathSciNet or zbMATH priority investigation. In particular, I obtained Drury’s author exposition and the publisher records for Drury and Kirkland, but not their complete published proofs.
+
+No target journal was specified. The editorial recommendation therefore assumes submission as an original research article to a specialist journal in matrix theory, spectral combinatorics or mathematical optimisation.
+
+## 3. Contribution and positioning
+
+### The constructive ordering identity
+
+Theorem 2.2 replaces an existence argument with an explicit certificate. After ordering the entries of \(x=(I-uS)^{-1}\mathbf1\), the manuscript obtains
+
+$$
+f_u(S)-F_n(u)
+=
+u\sum_{i<j}(1-S_{ij})(y_jx_i-y_ix_j).
+$$
+
+Its value lies in the combination of an **input-dependent order**, an **exact remainder**, and **strictly positive coefficients**. These give both the equality classification and a quantitative estimate on the continuous skew box.
+
+The resolvent identity itself is classical; the candidate contribution is this particular ordered decomposition and what it makes constructively accessible.
+
+### Quantitative Brualdi–Li recovery
+
+Theorem 4.2 goes beyond identifying an extremiser. It constructs a labelled Brualdi–Li tournament \(S^\sharp\) and proves
+
+$$
+\rho(J+tB_n)-\rho(J+tS)
+\ge c_n(u)\,d_E(S,S^\sharp).
+$$
+
+The alternating-repair lemma is an important part of the contribution: it converts analytic information into a combinatorial correction procedure.
+
+The ownership boundary nevertheless matters. The **qualitative full-Levinger-path maximum and odd-lattice mechanism are inherited from the supplied predecessor**. The endpoint maximum is the established Brualdi–Li result proved by Drury. The current paper should be credited for its constructive and quantitative additions, not treated as introducing all these ingredients independently. Drury’s own account describes the endpoint solution and its characteristic-polynomial approach. ([McGill Math][1])
+
+### The heterogeneous minimum theorem
+
+Theorem 5.1 is the paper’s strongest standalone result. For
+
+$$
+A_{ii}=\gamma_i,\qquad
+A_{ij}=\sqrt{m_im_j}(1+tS_{ij}),
+$$
+
+with \(m_i>0\), \(\gamma_i\ge0\) and \(0<t<1\), it establishes that every local minimum over the continuous skew box is a transitive tournament vertex. It also identifies a common characteristic polynomial for every transitive orientation.
+
+The diagonal generality is substantive. The symmetric part is generally **diagonal plus rank one**, not rank one. The 2003 Psarrakos–Tsatsomeros framework assumes a rank-one symmetric part; it therefore does not directly encompass the full family considered here. 
+
+There is also a concrete distinction from the 2006 tournament comparison: that comparison uses score variance, whereas all almost regular tournaments share the same score variance. The present ordering and repair arguments distinguish configurations inside that class. This is not merely a rephrasing of the earlier variance criterion.  
+
+## 4. Major comments
+
+### 4.1 The novelty comparison must become part of the paper
+
+**Issue.** The source ledger is commendably candid, but the manuscript still relies on phrases such as “the supplied candidate” and “the preceding source audit”. Those are provenance descriptions, not adequate scholarly positioning for an external reader.
+
+**Evidence.** The inherited minimum argument already uses vanishing first derivatives, negative second derivatives and ordering of left/right resolvent-vector ratios. The weighted theorem generalises that mechanism to an implicit Perron-root equation. Separately, Kirkland’s 1995 paper studies spectral changes under arc reversal using left and right Perron-vector information. Its publisher abstract establishes a close comparison target, although it does not establish that the current theorem is already known.
+
+**Why it matters.** The paper’s originality depends on the exact increment: heterogeneous diagonals and weights, classification of every continuous local minimum, cospectrality, and constructive edit-distance control. Without a theorem-level comparison, a referee cannot reliably distinguish a new extremal principle from a technically elegant extension of a known one.
+
+**Required revision.** Add a compact comparison table identifying each principal claim, its closest predecessor, the predecessor’s hypotheses and conclusion, and the additional conclusion obtained here. Give the inherited manuscript a stable bibliographic identity. Complete the comparisons with arc-reversal and fixed-pair-sum spectral optimisation, or explicitly delimit what remains unchecked. A failure to find a matching title is not sufficient evidence of priority.
+
+### 4.2 Explain what the stability coefficient actually certifies
+
+**Issue.** The coefficient is explicit and positive, but its practical strength is not adequately illustrated.
+
+**Evidence from my independent enumeration.** At \(n=6\):
+
+| Parameter | Manuscript coefficient \(c_6(u)\) | Smallest computed non-Brualdi–Li deficit | Deficit divided by \(c_6(u)\) |
+| --------- | --------------------------------: | ---------------------------------------: | ----------------------------: |
+| \(t=0.5\) |        \(2.4346507\times10^{-5}\) |                         \(0.0013920828\) |                     \(57.18\) |
+| \(t=1\)   |        \(4.0343898\times10^{-5}\) |                         \(0.0165951755\) |                    \(411.34\) |
+
+There are only \(\binom62=15\) unordered edges. Consequently, in these enumerated cases, the uniform estimate \(d_E\le\Delta/c_6(u)\) does not improve on the trivial distance bound for any nonextremal tournament. These are floating-point diagnostics, not certified optimal-gap computations.
+
+**Why it matters.** The theorem remains mathematically valid and potentially valuable, but “explicit quantitative stability” should not be allowed to imply a useful numerical reconstruction radius at every scale.
+
+**Required revision.** Include a coefficient/slack diagnostic and a worked nonextremal recovery example. Separate the actual returned distance, the sharper instance-dependent certificate from the exact remainder, and the uniform coefficient. Explain the roles of \(n\), \(t\), and the near-regularity threshold \(G_n(u)\).
+
+A sharp coefficient is **not** necessary for publication. Transparent interpretation is.
+
+### 4.3 Repair Section 3’s hypotheses explicitly
+
+**Issue.** Two local statements are broader than their proofs justify.
+
+At \(n=2,t=1\),
+
+$$
+J+B_2=
+\begin{pmatrix}
+1&0\\
+2&1
+\end{pmatrix},
+\qquad
+\lambda_0=1=n-1,
+\qquad
+u=1.
+$$
+
+Thus the asserted strict inequality \(u<1/(n-1)\) fails, and the irreducibility argument does not apply.
+
+The phrase “for arbitrary \(S\)” preceding (3.5) also needs qualification. Its second inequality uses \(\lambda_0-f_u(S)\ge0\), obtained for the tournament domain. Read literally over the entire continuous skew box, that step fails at \(S=0\), where \(f_u(S)=n>\lambda_0\).
+
+**Why it matters.** The paper moves between a continuous box and its tournament vertices. A reader must know precisely where integrality and parity enter.
+
+**Required revision.** Restrict the spectral application in Section 3 to even \(n\ge4\), and replace “arbitrary \(S\)” with “arbitrary skew tournament matrix \(S\) of this order”. Alternatively, handle the exceptional endpoint separately.
+
+These corrections do **not** contradict Theorem 4.2, which already states \(n\ge4\).
+
+### 4.4 State the strongest weighted conclusion earlier and more clearly
+
+**Issue.** The current presentation undersells the most interesting result while devoting prominent space to assurance terminology.
+
+**Evidence.** Theorem 5.1 is not merely an evaluation of one candidate minimum. It excludes all nontransitive local minima and establishes cospectrality for fixed heterogeneous vertex data. The latter is not explained by simply relabelling an unweighted matrix: the labelled pairs \((m_i,\gamma_i)\) remain fixed while the orientation changes.
+
+**Why it matters.** This is the result most likely to make the paper useful beyond its immediate predecessor.
+
+**Required revision.** Put a conventional abstract and explicit contribution statement before the assurance material. Identify separately the local-minimum classification, global attainment, common characteristic polynomial and scalar equation. Explain that the first part is a result about the optimisation landscape, while the determinant calculation identifies the attained value.
+
+## 5. Rigour, results and inference
+
+### 5.1 Positive resolvent vectors: the argument works
+
+The first-zero continuation proof in Lemma 2.1 is sound. At a hypothetical first zero,
+
+$$
+x\ge0,\qquad \|x\|_2^2=\mathbf1^\top x=f,
+$$
+
+and at most \(n-1\) entries are nonzero. Cauchy–Schwarz gives \(f\le n-1\), contradicting the zero-coordinate equation under \(u(n-1)<1\).
+
+Importantly, this does **not** assert that the inverse matrix is entrywise positive. It proves positivity of the two particular resolvent vectors needed later. That distinction is correctly maintained.
+
+The quantitative lower and upper bounds on their entries also follow from the displayed equations.
+
+### 5.2 The ordering identity and equality case are convincing
+
+I checked the sign in the resolvent identity and its paired-entry expansion. With \(x_i\ge x_j>0\) and \(y_j>y_i\),
+
+$$
+y_jx_i-y_ix_j
+=(y_j-y_i)x_i+y_i(x_i-x_j)>0.
+$$
+
+Therefore every nonzero term has the required sign, and equality forces every independent skew entry to be \(+1\) in the selected order.
+
+This proves more than numerical agreement with a transitive candidate. It explains why no fractional point can attain the same minimum. No unproved convexity assumption is being used.
+
+### 5.3 The odd-lattice reduction is genuinely dimension-independent
+
+The lattice argument is one of the strongest parts of the proof chain. Coercivity supplies a minimiser, coordinate comparisons give
+
+$$
+|(H_Sz)_i|\le (H_S)_{ii}\le1,
+$$
+
+and
+
+$$
+\|H_S^{-1}\|_\infty<2
+$$
+
+forces the odd minimiser to be a sign vector. This is a proof over the entire odd lattice, not a finite search masquerading as one.
+
+The strict penalty for \(\|z\|_\infty\ge3\) is also justified by an explicit coordinate move. Its use in excluding non-nearly-regular tournaments is legitimate.
+
+### 5.4 The spectral transfer avoids a common root-selection error
+
+The comparison uses a positive test vector and the identity
+
+$$
+(J+tS)x
+=\lambda_0x+(f_u(S)-\lambda_0)\mathbf1.
+$$
+
+This is preferable to inferring spectral order from the sign of a characteristic polynomial without controlling its roots. Once the tournament domain is explicit, the row-ratio argument gives the claimed deficit estimate.
+
+I found no missing sign or normalisation factor in this transfer.
+
+### 5.5 The alternating-repair estimate checks out
+
+The key relations
+
+$$
+\|b\|_1=4V,\qquad \|b\|_1\le4k
+$$
+
+yield \(V\le k\), and hence a repair cost at most \(k+V\le2k\).
+
+My separate implementation checked this construction for all **2,640 nearly regular labelled six-vertex tournaments**, at each of \(t=0.5\) and \(t=1\), without a violation.
+
+It also confirmed why the manuscript’s nonclaim about nearest recovery matters. In one near-extremal example, the procedure returned a Brualdi–Li tournament at distance four although a distance-one copy existed. That is compatible with the theorem; it should be shown as an illustrative limitation rather than concealed by reporting only successful certification.
+
+### 5.6 The weighted local-minimum proof is the decisive argument
+
+Writing
+
+$$
+A=D+ww^\top+K,\qquad
+R=(\lambda I-D-K)^{-1},
+$$
+
+the proof uses
+
+$$
+\frac{R+R^\top}{2}
+=R^\top(\lambda I-D)R\succ0.
+$$
+
+The positivity is justified because the Perron root exceeds every diagonal entry, so \(\lambda I-D\) is positive definite.
+
+For a skew coordinate perturbation \(E\), the implicit scalar equation has derivatives
+
+$$
+f_\lambda=-y^\top x<0,\qquad
+f_s=y^\top Ex.
+$$
+
+When the first derivative vanishes, the relevant left/right coordinate ratios coincide, giving
+
+$$
+f_{ss}
+=-2\zeta(Ex)^\top R(Ex)<0,
+\qquad \zeta>0.
+$$
+
+At such a stationary point,
+
+$$
+\lambda''=-\frac{f_{ss}}{f_\lambda}<0.
+$$
+
+That sign is correct. It excludes a local minimum even at an endpoint, because a sufficiently small feasible inward perturbation lowers the objective to second order.
+
+Nonzero derivatives then force saturation of every coordinate, and ordering the ratios forces transitivity. Compactness ensures a global minimum exists; the common transitive value supplies the converse.
+
+**This is a complete analytical mechanism, not a claim supported only by an optimiser repeatedly finding the same answer.**
+
+### 5.7 Characteristic polynomial, range and feasibility
+
+The common transitive polynomial is
+
+$$
+\Phi(\lambda)=
+\frac{
+(1+t)\prod_i[\lambda-\gamma_i+(1-t)m_i]
+-
+(1-t)\prod_i[\lambda-\gamma_i+(1+t)m_i]
+}{2t}.
+$$
+
+Its leading coefficient is one. The determinant derivation explains why it is invariant under reordering the fixed vertex data. The associated product equation has the claimed unique root above \(\max_i\gamma_i\).
+
+I independently computed the characteristic polynomial exactly for all 24 transitive orders of a four-vertex example with unequal rational masses and diagonals. Every polynomial agreed.
+
+The continuous-range conclusion and stabilisation criterion also follow from the stated hypotheses. For the supplied feasibility example, my independent calculation gives
+
+$$
+\rho(A_{\rm transitive})\approx0.8706616645,\qquad
+\rho(A_{\rm symmetric})\approx1.2554784946,
+$$
+
+consistent with \(\Phi(1)=13/48>0\).
+
+The five-vertex obstruction to a universal switched-transitive weighted maximum is a useful boundary result. It appropriately prevents the minimum theorem from being extrapolated into an unsupported maximum theorem.
+
+### 5.8 Computational assurance
+
+The computational package performs well:
+
+| Check                              | Review result                                                                         |
+| ---------------------------------- | ------------------------------------------------------------------------------------- |
+| Current package’s full replay      | All eight jobs passed                                                                 |
+| Manifest integrity                 | All 40 manifested files unchanged                                                     |
+| Supplied negative controls         | Valid cases passed; deliberately invalid cases failed                                 |
+| Independent six-vertex enumeration | All 32,768 tournaments checked at each of two parameters; no detected bound violation |
+| Independent weighted cospectrality | Exact agreement for all 24 transitive orders                                          |
+| Independent continuous-box grids   | 375 points across three heterogeneous parameter sets; no detected minimum violation   |
+
+The mutation tests are particularly useful because checksums are recomputed in disposable altered copies: failure is not produced solely by noticing a changed hash.
+
+The numerical optimisation evidence remains secondary. The 30 calls concern multiple generated parameter instances; they are not a coverage guarantee for every basin of one fixed landscape. The manuscript largely acknowledges this correctly.
+
+## 6. External literature check
+
+**Review date:** 28 September 2026. I used native web search, Exa, arXiv, publisher records, an author’s institutional page, and the complete supplied 2003/2006 papers retrieved from the Library. Search families covered weighted transitive minima, fixed pairwise sums, diagonal-plus-rank-one symmetric parts, local-minimum classification, and Brualdi–Li spectral-deficit/edit-distance stability. A supplementary search targeted 2021–2026 work.
+
+The decisive comparisons are:
+
+**Psarrakos and Tsatsomeros, 2003 — full text inspected.** This establishes the rank-one symmetric-part setting, Perron-vector projection identities and Levinger derivative bounds. These are background, not new contributions of the submitted paper. Its general heterogeneous diagonal is a genuine difference in hypotheses.  
+
+**Psarrakos and Tsatsomeros, 2006 — full text inspected.** The improved derivative and score-variance comparisons are close predecessors. Theorem 14 and Corollary 15 do not state the present constructive edit-distance result or classify heterogeneous continuous-box minima.  
+
+**Drury, 2012 — publisher abstract and author exposition inspected; full journal proof not obtained.** This establishes the classical endpoint priority. The author exposition also shows the relevance of characteristic polynomials, score vectors and odd-square minors, so those themes cannot be presented as wholly new. ([McGill Math][1])
+
+**Kirkland, 1995 — publisher abstract inspected.** Arc reversal and left/right Perron-vector conditions make this an important unresolved full-text comparison. The retrieved abstract does not establish duplication of the current continuous heterogeneous theorem.
+
+**Altenberg and Cohen, 2020 — abstract and publication metadata inspected.** General concavity of Levinger’s spectral-radius path is false. The manuscript is right not to rely on it. ([arXiv][2])
+
+**Engel and Sergeev, 2023 — abstract and publication metadata inspected.** Their extremal criteria and algorithms concern independent permutations within matrix rows. That feasible family differs from the present pair-coupled skew box, so the result is relevant context rather than an identified substitute theorem. ([arXiv][3])
+
+**Search conclusion:** I found no directly matching predecessor for the complete weighted local/global classification or constructive recovery theorem. That supports further publication development; it does not establish historical priority.
+
+## 7. Minor comments
+
+**Distance normalisation.** In Theorem 2.2, \(E(S)=\sum_{i<j}(1-S_{ij})\) equals twice the backward-edge count at tournament vertices. Calling it simply “the distance” is inconsistent with the opening edge-distance convention. Call it an entrywise discrepancy and immediately state \(E=2k\).
+
+**Positivity terminology.** When \(\gamma_i=0\), the weighted matrix has positive off-diagonal entries, not positive entries everywhere. Irreducibility and Perron simplicity still hold.
+
+**Boundary explanation.** Add one sentence explaining why negative second derivative excludes a minimum at a box endpoint. This small addition would make a crucial step easier to audit.
+
+**Complexity.** Retain the distinction between \(O(n^3)\) arithmetic operations and a bit-complexity or interval-certification guarantee. The rational-\(u\) interface should remain clearly separated from arbitrary numerical input \(t\).
+
+**Presentation and release.** Replace conversational provenance language with citations; move most assurance material to an appendix; add a reuse licence and stable release identifier. These are dissemination improvements, not conditions for mathematical truth.
+
+## 8. Prioritised revision plan
+
+**Must do before submission:** correct Section 3’s domain and endpoint statements; add the theorem-level novelty comparison; identify the predecessor stably; present a conventional abstract and a clear statement of which contributions belong to this paper.
+
+**Should do:** include the coefficient/slack table, one non-nearest recovery example, and an explanation of how an instance-specific certificate can be more informative than the uniform coefficient. Expand the weighted boundary-curvature step and clarify distance normalisation.
+
+**Could do:** sharpen the coefficient or derive more informative parameter-dependent regimes; broaden the consequences of the weighted classification; package certified numerical input handling. These would strengthen significance, but none is needed to repair the main proof.
+
+The revision priority is **not more undirected numerical searching**. The current analytical and computational evidence is already substantial. Positioning and interpretation are the limiting factors.
+
+## 9. Editorial recommendation
+
+**Major revision. Confidence: moderately high.**
+
+This is a favourable recommendation about the underlying mathematics. I do not recommend rejection for an invalid main theorem, and I do not regard the absence of proof-assistant verification as a defect.
+
+The recommendation reflects the work needed to turn a research supplement into a self-contained, properly positioned article: the new/inherited boundary must be explicit, the closest literature comparisons must be completed, and the quantitative result must be interpreted accurately.
+
+With those changes, and provided the novelty comparison survives, the manuscript looks suitable for consideration by a specialist research journal. Acceptance would remain contingent on an additional referee familiar with tournament matrices and structured Perron optimisation.
+
+## 10. Provisional REF calibration
+
+The appropriate unit is **UoA 10, Mathematical Sciences, Main Panel B**, retained in the REF 2029 structure. ([REF 2029][4])
+
+I checked current REF 2029 guidance. For the qualitative calibration below, I use the established star definitions and the published REF 2021 Main Panel B descriptors; I do not represent those older supplementary descriptors as a newly finalised 2029 panel document. Current 2029 guidance also makes clear that actual submission eligibility involves conditions beyond an output’s intellectual quality. ([REF 2029][5])
+
+| Dimension        | Provisional assessment                               | Reason                                                                                                                                                                                                               |
+| ---------------- | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Originality**  | **3★**, moderate confidence                          | The ordered certificate, constructive recovery and heterogeneous minimum classification appear to contain substantive additions. Full priority remains insufficiently resolved.                                      |
+| **Significance** | **3★, near the 2★/3★ boundary**, moderate confidence | A complete local/global classification and explicit polynomial have potential lasting value in structured spectral optimisation. The stability coefficient currently has limited demonstrated quantitative strength. |
+| **Rigour**       | **3★**, high confidence in the central arguments     | The proof mechanisms are coherent, equality cases are addressed, and exact/computational corroboration is strong. The identified hypothesis defects are local and repairable.                                        |
+| **Overall**      | **3★**, moderate confidence                          | The combined contribution is plausibly internationally excellent, but a world-leading assessment is not yet justified.                                                                                               |
+
+This is a holistic judgement, not an arithmetic average. Main Panel B’s published descriptors distinguish useful incremental contributions from important contributions with potential lasting influence, and distinguish those in turn from highly novel, leading or agenda-setting work. 
+
+### Why 3★ rather than 2★?
+
+The weighted theorem does not merely evaluate another example. It removes possible nontransitive local minima throughout an infinite-dimensional sequence of finite matrix families, permits arbitrary heterogeneous vertex data within its hypotheses, and gives the exact attained polynomial. Combined with constructive resolvent recovery, that looks stronger than routine parameter variation.
+
+### Why not 4★?
+
+The obstacle is **not the paper’s length, specialist subject matter, lack of citations accumulated over time, or absence of formalisation**. The unresolved issue is whether the new theorem is sufficiently original and consequential within its area to count as a leading contribution.
+
+The strongest candidate for that case is Theorem 5.1. However, its relationship to nearby Perron-optimisation results remains incompletely established, while the quantitative stability theorem has not yet demonstrated comparably strong consequences.
+
+**My present classification is therefore a credible 3★ candidate, not a substantiated 4★ output.** If close prior art absorbs the weighted classification, the assessment would fall towards 2★. Conversely, a clear priority comparison and a consequential use or extension of that classification would strengthen the upper-end case. Better packaging alone would not do so.
+
+## 11. References
+
+### Tournament matrices, Levinger paths and Perron optimisation
+
+Altenberg, L., & Cohen, J. E. (2020). Nonconcavity of the spectral radius in Levinger’s theorem. *Linear Algebra and its Applications, 606*, 201–218. DOI: **10.1016/j.laa.2020.07.028**. Abstract and publication metadata consulted. ([arXiv][2])
+
+Drury, S. W. (2012). Solution of the conjecture of Brualdi and Li. *Linear Algebra and its Applications, 436*(9), 3392–3399. DOI: **10.1016/j.laa.2011.11.031**. Publisher abstract consulted; the accompanying institutional exposition, *The Brualdi–Li conjecture*, was also inspected. ([McGill Math][1])
+
+Engel, G. M., & Sergeev, S. (2023). Bounding the row sum arithmetic mean by Perron roots of row-permuted matrices. *Linear Algebra and its Applications, 673*, 220–232. DOI: **10.1016/j.laa.2023.05.014**. Abstract and publication metadata consulted. ([arXiv][3])
+
+Kirkland, S. (1995). Spectral radii of tournament matrices whose graphs are related by an arc reversal. *Linear Algebra and its Applications, 217*, 179–202. DOI: **10.1016/0024-3795(94)00160-F**. Publisher abstract consulted; full text not obtained.
+
+Psarrakos, P. J., & Tsatsomeros, M. J. (2003). The Perron eigenspace of nonnegative almost skew-symmetric matrices and Levinger’s transformation. *Linear Algebra and its Applications, 360*, 43–57. DOI: **10.1016/S0024-3795(02)00439-1**. Full text consulted.
+
+Psarrakos, P. J., & Tsatsomeros, M. J. (2006). Bounds for Levinger’s function of nonnegative almost skew-symmetric matrices. *Linear Algebra and its Applications, 416*(2–3), 759–772. DOI: **10.1016/j.laa.2005.12.018**. Full text consulted.
+
+### Research assessment
+
+Research Excellence Framework. (2019, revised 2020). *Panel criteria and working methods* (REF 2019/02), especially Main Panel B, paragraph 202. 
+
+Research Excellence Framework. (2026, January 22). *Section 4—Contributions to Knowledge and Understanding guidance*. ([REF 2029][5])
+
+[1]: https://www.math.mcgill.ca/drury/research/brualdili/ "The Brualdi-Li Conjecture"
+[2]: https://arxiv.org/abs/2007.02618 "[2007.02618] Nonconcavity of the Spectral Radius in Levinger's Theorem"
+[3]: https://arxiv.org/abs/2209.01991 "[2209.01991] Bounding the row sum arithmetic mean by Perron roots of row-permuted matrices"
+[4]: https://2029.ref.ac.uk/panels/units-of-assessment/ "Units of assessment – REF 2029"
+[5]: https://2029.ref.ac.uk/guidance/section-4-contributions-to-knowledge-and-understanding-cku-guidance/ "Section 4 – Contributions to Knowledge and Understanding (CKU) guidance – REF 2029"

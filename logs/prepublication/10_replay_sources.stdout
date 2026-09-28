@@ -1,0 +1,1 @@
+{"box_grid_points": 375, "exact_transitive_orders": 24, "numerical_changes_excluding_elapsed": [], "only_excluded_field": "elapsed_seconds; raw value retained in external replay log", "repair_parameter_cases": 5280, "source_sha256": "c52fa53c55737f24ac26cbdf1149d778048657dc0345048ae3c68357fb77952c", "status": "PASS", "tournament_parameter_cases": 65536}

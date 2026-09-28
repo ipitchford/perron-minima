@@ -1,0 +1,40 @@
+{
+  "current_negative_controls": {
+    "invalid_rejections": 30,
+    "valid_acceptances": 10
+  },
+  "full_jobs": 10,
+  "new_exact": {
+    "factorisation_cases": 56,
+    "four_cycle_identities": 576,
+    "fragility_transitive_polynomials": 24,
+    "nearest_recovery_permutations": 720,
+    "robust_corners": 128,
+    "scope": "exact finite identities and examples; not a formal proof of the universal statements",
+    "status": "PASS"
+  },
+  "new_symbolic": {
+    "scalar_derivative_identities": 5,
+    "scope": "symbolic identities and exact interval certificates, not proof-assistant verification",
+    "status": "PASS",
+    "strict_coordinate_derivatives": 144,
+    "strict_local_vertices": 24,
+    "symbolic_four_point_orders": 24,
+    "universal_four_point_identity": true
+  },
+  "proof_scope": "Universal arguments are analytic. New Sections 3\u20134 are not covered by the supplied referee review. No proof-assistant verification or new REF grade.",
+  "record": "prepublication full replay; final archive fresh-extraction receipt is delivered separately",
+  "referee_replay": {
+    "box_grid_points": 375,
+    "exact_transitive_orders": 24,
+    "numerical_changes_excluding_elapsed": [],
+    "only_excluded_field": "elapsed_seconds; raw value retained in external replay log",
+    "repair_parameter_cases": 5280,
+    "source_sha256": "c52fa53c55737f24ac26cbdf1149d778048657dc0345048ae3c68357fb77952c",
+    "status": "PASS",
+    "tournament_parameter_cases": 65536
+  },
+  "reviewed_source_jobs": 8,
+  "reviewed_source_manifested_files": 40,
+  "status": "PASS"
+}

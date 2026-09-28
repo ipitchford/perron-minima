@@ -1,0 +1,9 @@
+{
+  "factorisation_cases": 56,
+  "four_cycle_identities": 576,
+  "fragility_transitive_polynomials": 24,
+  "nearest_recovery_permutations": 720,
+  "robust_corners": 128,
+  "scope": "exact finite identities and examples; not a formal proof of the universal statements",
+  "status": "PASS"
+}
